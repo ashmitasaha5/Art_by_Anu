@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Student Registration</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="gallery.html">Gallery</a>
+    </nav>
+</header>
+
+<section class="form-section">
+    <form class="register-form" onsubmit="submitForm(event)">
+        <h2>Register for Art Classes</h2>
+
+        <label>Full Name</label>
+        <input type="text" required>
+
+        <label>Email</label>
+        <input type="email" required>
+
+        <label>Age</label>
+        <input type="number" min="5" required>
+
+        <label>Class Type</label>
+        <select required>
+            <option>Sketching</option>
+            <option>Painting</option>
+            <option>Digital Art</option>
+            <option>Mixed Media</option>
+        </select>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <p id="success-message" class="success"></p>
+</section>
+
+<script>
+    function submitForm(event) {
+        event.preventDefault();
+        document.getElementById("success-message").innerText = 
+            "Registration successful! We will contact you soon.";
+    }
+</script>
+
+<footer>
+    <p>© 2025 Creative Art Studio</p>
+</footer>
+
+</body>
+</html>

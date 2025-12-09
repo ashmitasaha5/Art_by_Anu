@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background: #222;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.btn {
+    background: orange;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+.hero {
+    text-align: center;
+    padding: 120px 20px;
+    background: url('https://via.placeholder.com/1200x600?text=Art+Studio') no-repeat center/cover;
+    color: white;
+}
+
+.cta {
+    display: inline-block;
+    margin-top: 20px;
+    background: orange;
+    padding: 12px 20px;
+    border-radius: 6px;
+    color: white;
+    font-weight: bold;
+}
+
+.about, .gallery, .form-section {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.grid img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background: #f2f2f2;
+    padding: 25px;
+    border-radius: 8px;
+}
+
+.register-form input,
+.register-form select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #999;
+}
+
+.register-form button {
+    background: #333;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.success {
+    margin-top: 20px;
+    color: green;
+    font-weight: bold;
+    text-align: center;
+}
+
+footer {
+    background: #222;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* Mobile Optimization */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 10px;
+    }
+    nav a {
+        margin: 0 10px;
+    }
+}
