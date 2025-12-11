@@ -8,7 +8,7 @@
 <body>
 
 <header>
-    <h1>Vibrant Art Gallery</h1>
+    <h1>Handmade tales by Anu </h1>
     <div class="hamburger" onclick="toggleMenu()">
         <div></div><div></div><div></div>
     </div>
@@ -22,15 +22,50 @@
     </nav>
 </header>
 
-<section class="gallery">
-    <img src="assets/painting1.jpg" alt="Painting 1">
-    <img src="assets/painting2.jpg" alt="Painting 2">
-    <img src="assets/painting3.jpg" alt="Painting 3">
-    <img src="assets/painting4.jpg" alt="Painting 4">
-    <img src="assets/painting5.jpg" alt="Painting 5">
-    <img src="assets/painting6.jpg" alt="Painting 6">
+<section class="slideshow-container">
+
+    <div class="slide fade">
+        <img src="assets/painting1.jpg" alt="Painting 1">
+    </div>
+
+    <div class="slide fade">
+        <img src="assets/painting2.jpg" alt="Painting 2">
+    </div>
+
+    <div class="slide fade">
+        <img src="assets/painting3.jpg" alt="Painting 3">
+    </div>
+
+    <div class="slide fade">
+        <img src="assets/painting4.jpg" alt="Painting 4">
+    </div>
+
+    <div class="slide fade">
+        <img src="assets/painting5.jpg" alt="Painting 5">
+    </div>
+
+    <div class="slide fade">
+        <img src="assets/painting6.jpg" alt="Painting 6">
+    </div>
+
+    <!-- Navigation arrows -->
+    <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+    <a class="next" onclick="changeSlide(1)">&#10095;</a>
+
 </section>
+
+<!-- Optional dots -->
+<div class="dot-container">
+    <span class="dot" onclick="goToSlide(1)"></span>
+    <span class="dot" onclick="goToSlide(2)"></span>
+    <span class="dot" onclick="goToSlide(3)"></span>
+    <span class="dot" onclick="goToSlide(4)"></span>
+    <span class="dot" onclick="goToSlide(5)"></span>
+    <span class="dot" onclick="goToSlide(6)"></span>
+</div>
+
 
 <script src="script.js"></script>
 </body>
 </html>
+
