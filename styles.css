@@ -1,0 +1,138 @@
+/* General Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* Vibrant Theme Colors */
+:root {
+    --primary: #ff6f61;
+    --secondary: #ffcc00;
+    --accent: #6a5acd;
+    --bg-light: #fff8e7;
+    --text-dark: #333;
+    --gradient: linear-gradient(135deg, #ff6f61, #ffcc00, #6a5acd);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--bg-light);
+    color: var(--text-dark);
+}
+
+/* HEADER */
+header {
+    background: var(--gradient);
+    padding: 15px 20px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 { font-size: 1.7rem; font-weight: 700; }
+
+/* NAVIGATION */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background: white;
+}
+
+/* MOBILE NAV */
+@media (max-width: 768px) {
+    nav ul {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: var(--primary);
+        flex-direction: column;
+        display: none;
+        padding: 20px 0;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+
+/* GALLERY GRID */
+.gallery {
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* FORM PAGE */
+.form-container {
+    padding: 30px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, textarea, button {
+    padding: 12px;
+    border: 2px solid var(--primary);
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+button {
+    background: var(--gradient);
+    color: white;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+/* ABOUT PAGE */
+.about-section {
+    padding: 40px;
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+}
+
+.about-section img {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 5px solid var(--secondary);
+}
