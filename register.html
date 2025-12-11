@@ -2,59 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Registration</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Register for Art Course</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
 
 <header>
-    <h1>Student Registration</h1>
+    <h1>Register for Art Course</h1>
+    <div class="hamburger" onclick="toggleMenu()">
+        <div></div><div></div><div></div>
+    </div>
+
     <nav>
-        <a href="index.html">Home</a>
-        <a href="gallery.html">Gallery</a>
+        <ul id="nav-menu">
+            <li><a href="index.html">Gallery</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="about.html">About Artist</a></li>
+        </ul>
     </nav>
 </header>
 
-<section class="form-section">
-    <form class="register-form" onsubmit="submitForm(event)">
-        <h2>Register for Art Classes</h2>
-
-        <label>Full Name</label>
-        <input type="text" required>
-
-        <label>Email</label>
-        <input type="email" required>
-
-        <label>Age</label>
-        <input type="number" min="5" required>
-
-        <label>Class Type</label>
-        <select required>
-            <option>Sketching</option>
-            <option>Painting</option>
-            <option>Digital Art</option>
-            <option>Mixed Media</option>
-        </select>
-
+<section class="form-container">
+    <h2>Art Course Registration</h2>
+    <form>
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email Address" required>
+        <input type="tel" placeholder="Phone Number" required>
+        <textarea placeholder="Why do you want to join?" rows="4"></textarea>
         <button type="submit">Submit</button>
     </form>
-
-    <p id="success-message" class="success"></p>
 </section>
 
-<script>
-    function submitForm(event) {
-        event.preventDefault();
-        document.getElementById("success-message").innerText = 
-            "Registration successful! We will contact you soon.";
-    }
-</script>
-
-<footer>
-    <p>© 2025 Creative Art Studio</p>
-</footer>
-
+<script src="script.js"></script>
 </body>
 </html>
