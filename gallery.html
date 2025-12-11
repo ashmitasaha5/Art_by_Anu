@@ -17,17 +17,48 @@
     </nav>
 </header>
 
-<section class="gallery">
-    <h2>Student Artwork</h2>
+<section class="slideshow-container">
 
-    <div class="grid">
-        <img src="https://via.placeholder.com/300x200?text=Artwork+1" alt="Artwork 1">
-        <img src="https://via.placeholder.com/300x200?text=Artwork+2" alt="Artwork 2">
-        <img src="https://via.placeholder.com/300x200?text=Artwork+3" alt="Artwork 3">
-        <img src="https://via.placeholder.com/300x200?text=Artwork+4" alt="Artwork 4">
+    <div class="slide fade">
+        <img src="assets/painting1.jpg" alt="Painting 1">
     </div>
 
+    <div class="slide fade">
+        <img src="assets/painting2.jpg" alt="Painting 2">
+    </div>
+
+    <div class="slide fade">
+        <img src="assets/painting3.jpg" alt="Painting 3">
+    </div>
+
+    <div class="slide fade">
+        <img src="assets/painting4.jpg" alt="Painting 4">
+    </div>
+
+    <div class="slide fade">
+        <img src="assets/painting5.jpg" alt="Painting 5">
+    </div>
+
+    <div class="slide fade">
+        <img src="assets/painting6.jpg" alt="Painting 6">
+    </div>
+
+    <!-- Navigation arrows -->
+    <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+    <a class="next" onclick="changeSlide(1)">&#10095;</a>
+
 </section>
+
+<!-- Optional dots -->
+<div class="dot-container">
+    <span class="dot" onclick="goToSlide(1)"></span>
+    <span class="dot" onclick="goToSlide(2)"></span>
+    <span class="dot" onclick="goToSlide(3)"></span>
+    <span class="dot" onclick="goToSlide(4)"></span>
+    <span class="dot" onclick="goToSlide(5)"></span>
+    <span class="dot" onclick="goToSlide(6)"></span>
+</div>
+
 
 <footer>
     <p>© 2025 Creative Art Studio</p>
