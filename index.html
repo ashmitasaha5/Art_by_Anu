@@ -5,10 +5,11 @@
     <title>Art Gallery</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
 <header>
-    <h1>Handmade Tales by Anu</h1>
+    <h1>Vibrant Art Gallery</h1>
     <div class="hamburger" onclick="toggleMenu()">
         <div></div><div></div><div></div>
     </div>
@@ -22,16 +23,32 @@
     </nav>
 </header>
 
-<section class="gallery">
-    <img src="assets/painting1.jpg" alt="Painting 1">
-    <img src="assets/painting2.jpg" alt="Painting 2">
-    <img src="assets/painting3.jpg" alt="Painting 3">
-    <img src="assets/painting4.jpg" alt="Painting 4">
-    <img src="assets/painting5.jpg" alt="Painting 5">
-    <img src="assets/painting6.jpg" alt="Painting 6">
+<!-- GALLERY SLIDESHOW -->
+<section class="slideshow-container">
+
+    <div class="slide fade">
+        <img src="assets/painting1.jpg">
+    </div>
+
+    <div class="slide fade">
+        <img src="assets/painting2.jpg">
+    </div>
+
+    <div class="slide fade">
+        <img src="assets/painting3.jpg">
+    </div>
+
+    <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+    <a class="next" onclick="changeSlide(1)">&#10095;</a>
+
 </section>
+
+<div class="dot-container">
+    <span class="dot" onclick="goToSlide(1)"></span>
+    <span class="dot" onclick="goToSlide(2)"></span>
+    <span class="dot" onclick="goToSlide(3)"></span>
+</div>
 
 <script src="script.js"></script>
 </body>
 </html>
-
