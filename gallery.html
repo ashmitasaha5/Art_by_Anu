@@ -2,67 +2,56 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Artwork Gallery</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
 
 <header>
-    <h1>Artwork Gallery</h1>
+    <h1>Art Gallery</h1>
+    <div class="hamburger" onclick="toggleMenu()">
+        <div></div><div></div><div></div>
+    </div>
+
     <nav>
-        <a href="index.html">Home</a>
-        <a href="register.html" class="btn">Register</a>
+        <ul id="nav-menu">
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
     </nav>
 </header>
 
 <section class="slideshow-container">
 
     <div class="slide fade">
-        <img src="assets/painting1.jpg" alt="Painting 1">
+        <img src="art1.jpg">
     </div>
 
     <div class="slide fade">
-        <img src="assets/painting2.jpg" alt="Painting 2">
+        <img src="art2.jpg">
     </div>
 
     <div class="slide fade">
-        <img src="assets/painting3.jpg" alt="Painting 3">
+        <img src="art3.jpg">
     </div>
 
     <div class="slide fade">
-        <img src="assets/painting4.jpg" alt="Painting 4">
+        <img src="bcart.png">
     </div>
 
-    <div class="slide fade">
-        <img src="assets/painting5.jpg" alt="Painting 5">
-    </div>
-
-    <div class="slide fade">
-        <img src="assets/painting6.jpg" alt="Painting 6">
-    </div>
-
-    <!-- Navigation arrows -->
     <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
     <a class="next" onclick="changeSlide(1)">&#10095;</a>
 
 </section>
 
-<!-- Optional dots -->
 <div class="dot-container">
     <span class="dot" onclick="goToSlide(1)"></span>
     <span class="dot" onclick="goToSlide(2)"></span>
     <span class="dot" onclick="goToSlide(3)"></span>
     <span class="dot" onclick="goToSlide(4)"></span>
-    <span class="dot" onclick="goToSlide(5)"></span>
-    <span class="dot" onclick="goToSlide(6)"></span>
 </div>
 
-
-<footer>
-    <p>© 2025 Creative Art Studio</p>
-</footer>
-
+<script src="script.js"></script>
 </body>
 </html>
