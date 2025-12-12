@@ -76,6 +76,27 @@ nav a {
         display: flex;
     }
 }
+/* Make header and menu appear above all elements */
+header {
+    position: relative;
+    z-index: 9999;
+}
+
+nav ul {
+    position: absolute;
+    z-index: 9999;
+}
+
+.hamburger {
+    position: relative;
+    z-index: 10000;
+}
+
+/* Ensure slideshow stays behind header */
+.slideshow-container {
+    position: relative;
+    z-index: 1;
+}
 
 /* GALLERY GRID */
 .gallery {
@@ -189,3 +210,4 @@ button {
     from {opacity: .4}
     to {opacity: 1}
 }
+
